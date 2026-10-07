@@ -683,22 +683,208 @@ body {
   box-shadow: 0 0 50px rgba(229, 9, 20, 0.65), 0 0 30px rgba(255, 26, 53, 0.45);
 }
 
-.avatar-img-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
+/* Red Team Operative Console (Photo-Free Cyber Tactical Card) */
+.redteam-console-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(circle at 50% 25%, rgba(229, 9, 20, 0.22) 0%, rgba(10, 11, 18, 0.95) 75%);
+  border: 2px solid #ff1a35;
+  box-shadow: 0 0 35px rgba(229, 9, 20, 0.45), inset 0 0 30px rgba(229, 9, 20, 0.15);
+  box-sizing: border-box;
 }
-.avatar-img-box img {
-  width: 100%;
+
+.operative-console-body {
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+  padding-top: 12px;
+}
+
+.console-emblem-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emblem-radar-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 26, 53, 0.55);
+  animation: spinSlow 15s linear infinite;
+}
+
+.emblem-radar-sweep {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+}
+
+.emblem-shield-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e50914, #7f000d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  color: #fff;
+  border: 2px solid #ff4757;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.emblem-sub-icon {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  background: #07070a;
+  border: 1.5px solid #ff1a35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  color: #ff1a35;
+  z-index: 3;
+}
+
+.console-operative-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+  text-shadow: 0 0 12px rgba(255, 26, 53, 0.6);
+}
+
+.console-operative-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #ff1a35;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.console-badge-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.console-badge-row .c-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid rgba(255, 26, 53, 0.4);
+  color: #ffb4be;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.console-spec-matrix {
+  width: 100%;
+  background: rgba(7, 8, 14, 0.75);
+  border: 1px solid rgba(229, 9, 20, 0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.spec-matrix-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.spec-matrix-row:last-child {
+  border-bottom: none;
+}
+
+.spec-key {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+}
+.spec-key i {
+  color: #ff1a35;
+  font-size: 0.68rem;
+}
+
+.spec-val {
+  color: #fff;
+  font-weight: 600;
+}
+
+.status-live {
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-light {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseLight 1.8s infinite;
+}
+
+@keyframes pulseLight {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.console-crypto-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: #64748b;
+  padding: 5px 8px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.crypto-ping {
+  color: #ff1a35;
+  font-weight: 700;
 }
 
 /* Scanline Effect */

@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMJAD T.S // Cyber Defender & CEH Ethical Hacker | Anime Portfolio</title>
+  <meta name="description" content="Portfolio of Amjad T.S - Certified Ethical Hacker (CEH), Cybersecurity Specialist, Python Developer & SIEM Log Monitoring Engineer.">
+  
+  <!-- Google Fonts: Orbitron, Rajdhani, Poppins, Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="anime-theme dark-mode">
+
+  <!-- Interactive Sakura & Cyber Dust Particles Canvas -->
+  <canvas id="sakuraCanvas"></canvas>
+
+  <!-- Speedline Flash Overlay for special anime actions -->
+  <div id="speedlinesOverlay" class="speedlines-overlay"></div>
+
+  <!-- Anime Manga Action Sound Popup Floating Container -->
+  <div id="mangaSoundContainer" class="manga-sound-container"></div>
+
+  <!-- Custom Cyber Blade Cursor -->
+  <div id="customCursor" class="custom-cursor"></div>
+  <div id="cursorTrail" class="cursor-trail"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-jp">サイバー防衛</span>
+        <div class="logo-main">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">AMJAD</span>
+          <span class="logo-tag">.DEV</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link"><span class="nav-jp">概要</span> 01. Codex</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-jp">能力</span> 02. Arsenal</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-jp">任務</span> 03. Missions</a></li>
+        <li><a href="#certifications" class="nav-link"><span class="nav-jp">称号</span> 04. Credentials</a></li>
+        <li><a href="#resume" class="nav-link"><span class="nav-jp">履歴書</span> 05. Resume</a></li>
+        <li><a href="#terminal" class="nav-link"><span class="nav-jp">端末</span> 06. Terminal</a></li>
+        <li><a href="#contact" class="nav-link nav-contact-btn"><span class="nav-jp">交信</span> Contact</a></li>
+      </ul>
+
+      <!-- Integrated HUD Control Group -->
+      <div class="nav-hud-group">
+        <button id="sfxToggleBtn" class="hud-pill" title="Toggle Anime Cyber Sound Effects">
+          <i class="fa-solid fa-volume-high"></i>
+          <span class="hud-text">SFX: ON</span>
+        </button>
+        <button id="sakuraToggleBtn" class="hud-pill" title="Toggle Sakura Petals Animation">
+          <i class="fa-solid fa-fan"></i>
+          <span class="hud-text">SAKURA</span>
+        </button>
+        <button id="avatarModeToggleBtn" class="hud-pill glow-cyan" title="Toggle Anime Avatar / Real Agent Mode">
+          <i class="fa-solid fa-mask"></i>
+          <span class="hud-text">MODE: ANIME</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        
+        <!-- Status Pill -->
+        <div class="hero-badge-wrapper">
+          <div class="status-indicator">
+            <span class="pulse-dot"></span>
+            <span class="status-text">STATUS: ACTIVE THREAT DEFENDER // CEH</span>
+          </div>
+          <div class="class-rank">RANK: S-CLASS HUNTER</div>
+        </div>
+
+        <h2 class="hero-greeting">
+          <span class="kanji-accent">ようこそ //</span> GREETINGS, OPERATIVE
+        </h2>
+
+        <h1 class="hero-title">
+          I'M <span class="highlight-text glitched-text" data-text="AMJAD T.S">AMJAD T.S</span>
+        </h1>
+
+        <!-- Anime Dynamic Subtitle Typing -->
+        <div class="typing-container">
+          <span class="prompt-arrow">&gt;</span>
+          <span id="typedRole" class="typed-text"></span>
+          <span class="cursor-blink">_</span>
+        </div>
+
+        <p class="hero-description">
+          Tech-enthusiastic cybersecurity practitioner armed with <strong>EC-Council CEH</strong> certification 
+          and an Advanced Diploma in Cyber Defence. Specialized in Python automation, enterprise SIEM threat telemetry 
+          (Splunk & Wazuh), and aggressive vulnerability hunting.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="anime-btn btn-primary sound-click">
+            <span class="btn-jp">任務を見る</span>
+            <span class="btn-label"><i class="fa-solid fa-crosshairs"></i> View Missions</span>
+            <div class="btn-flare"></div>
+          </a>
+
+          <a href="#resume" class="anime-btn btn-secondary sound-click">
+            <span class="btn-jp">履歴書を見る</span>
+            <span class="btn-label"><i class="fa-solid fa-file-pdf"></i> View Resume</span>
+          </a>
+
+          <a href="#terminal" class="anime-btn btn-glass sound-click">
+            <span class="btn-jp">端末を開く</span>
+            <span class="btn-label"><i class="fa-solid fa-terminal"></i> Terminal CLI</span>
+          </a>
+
+          <button id="copyEmailQuickBtn" class="anime-btn btn-glass sound-click">
+            <span class="btn-jp">電信複写</span>
+            <span class="btn-label"><i class="fa-regular fa-copy"></i> Copy Email</span>
+          </button>
+        </div>
+
+        <!-- Quick Telemetry Stats Bar -->
+        <div class="telemetry-bar">
+          <div class="telemetry-item">
+            <span class="telem-num" data-val="100">100%</span>
+            <span class="telem-label">Target Vigilance</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telem-num" data-val="12">12+</span>
+            <span class="telem-label">Offensive/Defensive Tools</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telem-num">CEH v12</span>
+            <span class="telem-label">EC-Council Certified</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telem-num">SIEM</span>
+            <span class="telem-label">Splunk & Wazuh EDR</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual Avatar Card (Dual Persona with Anime Transform) -->
+      <div class="hero-visual">
+        <div class="avatar-card-wrapper" id="avatarCardWrapper">
+          <div class="hologram-scanline"></div>
+          
+          <div class="avatar-card">
+            <!-- Front image (Anime Protagonist Hacker) -->
+            <div class="avatar-img-box avatar-anime active-avatar" id="avatarAnimeBox">
+              <img src="assets/amjad_anime.jpg" alt="Amjad T.S Anime Hacker Specialist" id="animeAvatarImg">
+              <div class="avatar-badge anime-badge">
+                <i class="fa-solid fa-bolt"></i> ANIME PROTAGONIST MODE
+              </div>
+            </div>
+
+            <!-- Alternate image (Real Photo) -->
+            <div class="avatar-img-box avatar-real" id="avatarRealBox">
+              <img src="assets/amjad_photo.png" alt="Amjad T.S Professional Photo" id="realAvatarImg">
+              <div class="avatar-badge real-badge">
+                <i class="fa-solid fa-user-shield"></i> REAL OPERATIVE MODE
+              </div>
+            </div>
+
+            <!-- Avatar HUD Decors -->
+            <div class="hud-corner corner-tl"></div>
+            <div class="hud-corner corner-tr"></div>
+            <div class="hud-corner corner-bl"></div>
+            <div class="hud-corner corner-br"></div>
+            
+            <div class="hud-bracket-text top-left">CYBER_DEFENSE://SEC_01</div>
+            <div class="hud-bracket-text bottom-right">LOC: KERALA, IN</div>
+
+            <!-- Transform Switch Trigger -->
+            <div class="avatar-switch-pill" id="avatarSwitchPill">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <span>Click to Transform Mode</span>
+            </div>
+          </div>
+
+          <!-- Anime Aura Glow Effect behind card -->
+          <div class="avatar-energy-aura"></div>
+          
+          <!-- Floating Cyber Orbits -->
+          <div class="cyber-orbit-ring ring-1"></div>
+          <div class="cyber-orbit-ring ring-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Codex / About Section -->
+  <section id="about" class="section-wrapper codex-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> CODEX // PROFILE</span>
+        <h2 class="section-title">THE OPERATIVE'S <span class="highlight-text">ORIGIN</span></h2>
+        <p class="section-subtitle">Bridging offensive vulnerability detection with impenetrable log monitoring architectures.</p>
+      </div>
+
+      <div class="codex-grid">
+        <!-- Bio Card -->
+        <div class="codex-card glass-panel bio-panel">
+          <div class="card-kanji-bg">電子防衛</div>
+          <div class="panel-header">
+            <div class="status-light"></div>
+            <h3>IDENTITY DOSSIER // AMJAD T.S</h3>
+            <span class="serial-tag">ID: TS-CEH-8592</span>
+          </div>
+
+          <p class="codex-bio-text">
+            I am a tech-enthusiastic IT graduate rooted in <strong>Kodungallur, Kerala</strong>, fueled by an intense passion for 
+            <strong>cybersecurity, Python development, and proactive vulnerability hunting</strong>. 
+          </p>
+          <p class="codex-bio-text">
+            Armed with practical training from <em>Red Team Hackers Academy</em> and validated as a <strong>Certified Ethical Hacker (CEH)</strong> 
+            by EC-Council, I specialize in analyzing threat vectors, dissecting network anomalies, and constructing autonomous 
+            log correlation alerts inside SIEM platforms like <strong>Splunk</strong> and <strong>Wazuh</strong>.
+          </p>
+
+          <div class="dossier-meta-list">
+            <div class="meta-entry">
+              <span class="meta-key"><i class="fa-solid fa-location-dot"></i> Base:</span>
+              <span class="meta-val">Kodungallur, Kerala, India</span>
+            </div>
+            <div class="meta-entry">
+              <span class="meta-key"><i class="fa-solid fa-envelope"></i> Comms:</span>
+              <span class="meta-val">tsamjad07@gmail.com</span>
+            </div>
+            <div class="meta-entry">
+              <span class="meta-key"><i class="fa-solid fa-phone"></i> Hotline:</span>
+              <span class="meta-val">+91 8592068771</span>
+            </div>
+            <div class="meta-entry">
+              <span class="meta-key"><i class="fa-brands fa-linkedin"></i> Network:</span>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="meta-link">Amjad's LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="action-btn-group">
+            <a href="mailto:tsamjad07@gmail.com" class="anime-btn btn-primary sound-click">
+              <span class="btn-jp">メール送信</span>
+              <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> Initiate Transmission</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Combat & Defense Stats Radar / RPG Gauge Panel -->
+        <div class="codex-card glass-panel stats-panel">
+          <div class="panel-header">
+            <div class="status-light yellow"></div>
+            <h3>COMBAT RADAR // SKILL PARAMETERS</h3>
+            <span class="serial-tag">STAT LEVEL: OVERDRIVE</span>
+          </div>
+
+          <div class="power-gauges">
+            
+            <div class="gauge-item">
+              <div class="gauge-info">
+                <span class="gauge-name"><i class="fa-solid fa-shield-virus"></i> Threat & Vulnerability Hunting</span>
+                <span class="gauge-pct">94%</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-fill fill-cyan" style="width: 94%;"></div>
+              </div>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge-info">
+                <span class="gauge-name"><i class="fa-solid fa-network-wired"></i> SIEM & Telemetry (Splunk / Wazuh)</span>
+                <span class="gauge-pct">92%</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-fill fill-magenta" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge-info">
+                <span class="gauge-name"><i class="fa-solid fa-terminal"></i> Python Automation & Security Scripting</span>
+                <span class="gauge-pct">88%</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-fill fill-purple" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge-info">
+                <span class="gauge-name"><i class="fa-solid fa-user-ninja"></i> Penetration Testing & VAPT</span>
+                <span class="gauge-pct">90%</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-fill fill-cyan" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge-info">
+                <span class="gauge-name"><i class="fa-brands fa-linux"></i> Linux Kernel & Windows Administration</span>
+                <span class="gauge-pct">89%</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-fill fill-yellow" style="width: 89%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tactical Special Traits -->
+          <div class="special-traits">
+            <div class="trait-tag"><i class="fa-solid fa-check-double"></i> Real-Time SIEM Correlation</div>
+            <div class="trait-tag"><i class="fa-solid fa-check-double"></i> VAPT Assessment</div>
+            <div class="trait-tag"><i class="fa-solid fa-check-double"></i> Rapid Incident Isolation</div>
+            <div class="trait-tag"><i class="fa-solid fa-check-double"></i> Critical Problem Solving</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tactical Arsenal / Skills Section -->
+  <section id="skills" class="section-wrapper arsenal-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-microchip"></i> ARSENAL // CAPABILITIES</span>
+        <h2 class="section-title">TACTICAL <span class="highlight-text">WEAPONRY & TOOLS</span></h2>
+        <p class="section-subtitle">An arsenal forged in cyber defense simulations and real-world penetration test methodologies.</p>
+      </div>
+
+      <!-- Skill Filter Pills -->
+      <div class="skill-filters">
+        <button class="filter-pill active sound-click" data-filter="all">All Modules</button>
+        <button class="filter-pill sound-click" data-filter="cyber">Cybersecurity Core</button>
+        <button class="filter-pill sound-click" data-filter="tools">Tactical Tools</button>
+        <button class="filter-pill sound-click" data-filter="code">Code & Systems</button>
+        <button class="filter-pill sound-click" data-filter="soft">Soft Attributes</button>
+      </div>
+
+      <div class="arsenal-grid" id="arsenalGrid">
+        
+        <!-- Category: Cybersecurity Skills -->
+        <div class="arsenal-card glass-panel" data-category="cyber">
+          <div class="card-glow-edge cyan"></div>
+          <div class="card-icon"><i class="fa-solid fa-user-secret"></i></div>
+          <h3 class="card-title">Penetration Testing & VAPT</h3>
+          <p class="card-desc">Simulating adversarial vectors across web applications, wireless infrastructures, and enterprise perimeters.</p>
+          <div class="card-tags">
+            <span class="tag">VAPT</span>
+            <span class="tag">OWASP Top 10</span>
+            <span class="tag">Web App Security</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="cyber">
+          <div class="card-glow-edge magenta"></div>
+          <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+          <h3 class="card-title">Threat Analysis & Risk Assessment</h3>
+          <p class="card-desc">Evaluating attack surfaces, identifying indicators of compromise (IoC), and performing systematic vulnerability scoring.</p>
+          <div class="card-tags">
+            <span class="tag">Threat Hunting</span>
+            <span class="tag">IoC Detection</span>
+            <span class="tag">Risk Scoring</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge cyan"></div>
+          <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3 class="card-title">Splunk Enterprise SIEM</h3>
+          <p class="card-desc">Centralized log collection, universal forwarder deployment, complex SPL queries, and automated incident alert generation.</p>
+          <div class="card-tags">
+            <span class="tag">Splunk Core</span>
+            <span class="tag">Universal Forwarder</span>
+            <span class="tag">Alert Pipelines</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge purple"></div>
+          <div class="card-icon"><i class="fa-solid fa-shield-cat"></i></div>
+          <h3 class="card-title">Wazuh Security Platform</h3>
+          <p class="card-desc">Open-source XDR & SIEM deployment, agent rollouts, log integrity monitoring, and real-time security telemetry correlation.</p>
+          <div class="card-tags">
+            <span class="tag">Wazuh Manager</span>
+            <span class="tag">Agent EDR</span>
+            <span class="tag">FIM & Alerts</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge magenta"></div>
+          <div class="card-icon"><i class="fa-solid fa-ethernet"></i></div>
+          <h3 class="card-title">Wireshark & Packet Inspection</h3>
+          <p class="card-desc">Deep packet analysis, protocol decoding, sniffing unauthorized streams, and detecting lateral traffic infiltration.</p>
+          <div class="card-tags">
+            <span class="tag">PCAP Analysis</span>
+            <span class="tag">TCP/IP</span>
+            <span class="tag">Traffic Anomalies</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge yellow"></div>
+          <div class="card-icon"><i class="fa-solid fa-spider"></i></div>
+          <h3 class="card-title">Burp Suite & Nmap Suite</h3>
+          <p class="card-desc">Intercepting HTTP proxies, active network surface discovery, OS fingerprinting, port auditing, and stealth probes.</p>
+          <div class="card-tags">
+            <span class="tag">Burp Proxy</span>
+            <span class="tag">Nmap NSE</span>
+            <span class="tag">Port Scanning</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge cyan"></div>
+          <div class="card-icon"><i class="fa-solid fa-skull"></i></div>
+          <h3 class="card-title">Metasploit, Nessus & Nikto</h3>
+          <p class="card-desc">Automated vulnerability auditing, exploit proof-of-concept testing, and web server configuration flaw enumeration.</p>
+          <div class="card-tags">
+            <span class="tag">Metasploit</span>
+            <span class="tag">Nessus Scanner</span>
+            <span class="tag">Nikto Web Scan</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="tools">
+          <div class="card-glow-edge purple"></div>
+          <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
+          <h3 class="card-title">Hydra & Aircrack-ng</h3>
+          <p class="card-desc">Authentication stress auditing, rapid credential dictionary analysis, and 802.11 wireless security assessments.</p>
+          <div class="card-tags">
+            <span class="tag">Hydra</span>
+            <span class="tag">Aircrack-ng</span>
+            <span class="tag">WPA/WPA2 Audit</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="code">
+          <div class="card-glow-edge cyan"></div>
+          <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+          <h3 class="card-title">Python Security Scripting</h3>
+          <p class="card-desc">Crafting custom socket scanners, log parsing utilities, payload automations, and defensive monitoring bots.</p>
+          <div class="card-tags">
+            <span class="tag">Python 3</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Custom Tooling</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="code">
+          <div class="card-glow-edge yellow"></div>
+          <div class="card-icon"><i class="fa-brands fa-linux"></i></div>
+          <h3 class="card-title">Linux & Windows Hardening</h3>
+          <p class="card-desc">Kali Linux, Ubuntu server architecture, Windows event logging, PowerShell security auditing, and command-line mastery.</p>
+          <div class="card-tags">
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Bash CLI</span>
+            <span class="tag">Event Logs</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="soft">
+          <div class="card-glow-edge magenta"></div>
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="card-title">Critical Thinking & Problem Solving</h3>
+          <p class="card-desc">Structured root-cause deduction, rapid anomaly isolation under pressure, and keen observational vigilance.</p>
+          <div class="card-tags">
+            <span class="tag">Analytical</span>
+            <span class="tag">Tactical Observant</span>
+            <span class="tag">Teamwork</span>
+          </div>
+        </div>
+
+        <div class="arsenal-card glass-panel" data-category="soft">
+          <div class="card-glow-edge cyan"></div>
+          <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3 class="card-title">Security Communication</h3>
+          <p class="card-desc">Delivering unambiguous threat reports, translating technical vulnerabilities into executive risk clarity, and collaborative defense.</p>
+          <div class="card-tags">
+            <span class="tag">Reporting</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Synergy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Missions / Projects Section -->
+  <section id="projects" class="section-wrapper missions-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> MISSIONS // PROJECTS</span>
+        <h2 class="section-title">COMBAT DEPLOYMENTS & <span class="highlight-text">OPERATIONS</span></h2>
+        <p class="section-subtitle">Real-world operational implementations defending enterprise digital perimeters.</p>
+      </div>
+
+      <div class="missions-showcase">
+        
+        <!-- Mission 01: Splunk SIEM -->
+        <article class="mission-card glass-panel">
+          <div class="mission-grid">
+            <div class="mission-info">
+              <div class="mission-tag-row">
+                <span class="operation-badge">OPERATION 01 // SIEM AEGIS</span>
+                <span class="status-active"><i class="fa-solid fa-circle"></i> DEPLOYED</span>
+              </div>
+              <h3 class="mission-title">Splunk SIEM Centralized Log Monitoring System</h3>
+              <p class="mission-desc">
+                Engineered a unified SIEM defense fortress leveraging <strong>Splunk Enterprise</strong>. 
+                Seamlessly configured and linked <strong>Splunk Universal Forwarders</strong> across diverse nodes to ingest system, 
+                authentication, and network telemetry into an indexing core.
+              </p>
+              
+              <div class="mission-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Centralized multi-host log aggregation & index normalization</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Crafted custom SPL alert triggers detecting brute-force login anomalies</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Constructed real-time visualization dashboards for incident response triage</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-pills">
+                <span class="pill">Splunk Enterprise</span>
+                <span class="pill">Universal Forwarder</span>
+                <span class="pill">SPL Querying</span>
+                <span class="pill">Incident Alerting</span>
+                <span class="pill">Syslog</span>
+              </div>
+
+              <div class="mission-actions">
+                <button class="anime-btn btn-primary sound-click open-demo-btn" data-project="splunk">
+                  <span class="btn-jp">実演を見る</span>
+                  <span class="btn-label"><i class="fa-solid fa-play"></i> Live SIEM Feed Simulation</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="mission-visual">
+              <div class="terminal-mockup">
+                <div class="terminal-bar">
+                  <div class="terminal-circles">
+                    <span class="tc red"></span>
+                    <span class="tc yellow"></span>
+                    <span class="tc green"></span>
+                  </div>
+                  <div class="terminal-title">splunk_core_monitor.splx</div>
+                </div>
+                <div class="terminal-screen" id="splunkSimScreen">
+                  <div class="code-line"><span class="c-cyan">index=security_logs</span> sourcetype=auth</div>
+                  <div class="code-line"><span class="c-purple">| stats count</span> by action, src_ip, user</div>
+                  <div class="code-line"><span class="c-yellow">| where count &gt; 5</span> AND action="FAILED"</div>
+                  <div class="code-line"><span class="c-magenta">| eval risk_level</span>="CRITICAL_BRUTE_FORCE"</div>
+                  <div class="code-line"><span class="c-green">[ALERT TRIGGERED]</span> Suspicious host flagged: 192.168.1.105</div>
+                  <div class="code-line alert-pulse"><i class="fa-solid fa-triangle-exclamation"></i> MITIGATION: Universal Forwarder locked credential attempts</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mission 02: Wazuh Threat Monitoring -->
+        <article class="mission-card glass-panel">
+          <div class="mission-grid">
+            <div class="mission-info">
+              <div class="mission-tag-row">
+                <span class="operation-badge magenta">OPERATION 02 // SENTINEL CORE</span>
+                <span class="status-active"><i class="fa-solid fa-circle"></i> DEPLOYED</span>
+              </div>
+              <h3 class="mission-title">Wazuh EDR & Security Monitoring Infrastructure</h3>
+              <p class="mission-desc">
+                Architected and deployed the open-source <strong>Wazuh security framework</strong> for endpoint security monitoring, 
+                rootkit detection, file integrity monitoring (FIM), and threat telemetry across distributed operating environments.
+              </p>
+              
+              <div class="mission-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Provisioned Wazuh Manager and orchestrated agent deployments across endpoints</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Real-time file integrity tracking preventing rootkit & unauthorized script modification</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Configured instant notification webhooks for high-severity CVE and IoC discoveries</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-pills">
+                <span class="pill">Wazuh Manager</span>
+                <span class="pill">Endpoint Agents</span>
+                <span class="pill">Threat Detection</span>
+                <span class="pill">FIM</span>
+                <span class="pill">Real-Time Alerts</span>
+              </div>
+
+              <div class="mission-actions">
+                <button class="anime-btn btn-primary sound-click open-demo-btn" data-project="wazuh">
+                  <span class="btn-jp">実演を見る</span>
+                  <span class="btn-label"><i class="fa-solid fa-play"></i> Live Wazuh Agent Telemetry</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="mission-visual">
+              <div class="terminal-mockup">
+                <div class="terminal-bar">
+                  <div class="terminal-circles">
+                    <span class="tc red"></span>
+                    <span class="tc yellow"></span>
+                    <span class="tc green"></span>
+                  </div>
+                  <div class="terminal-title">wazuh_agent_stream.sh</div>
+                </div>
+                <div class="terminal-screen" id="wazuhSimScreen">
+                  <div class="code-line"><span class="c-green"># wazuh-control status</span></div>
+                  <div class="code-line">wazuh-modulesd is running... [OK]</div>
+                  <div class="code-line">wazuh-analysisd is running... [OK]</div>
+                  <div class="code-line"><span class="c-cyan">&gt; Active Agent Count:</span> 12 Registered Agents</div>
+                  <div class="code-line"><span class="c-magenta">&gt; Telemetry Stream:</span> FIM Integrity Check: PASS</div>
+                  <div class="code-line alert-pulse cyan"><i class="fa-solid fa-shield-halved"></i> SENTINEL ACTIVE: Zero unauthorized root escalations</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mission 03: Python Automation Arsenal -->
+        <article class="mission-card glass-panel">
+          <div class="mission-grid">
+            <div class="mission-info">
+              <div class="mission-tag-row">
+                <span class="operation-badge purple">OPERATION 03 // PYTHON CYBER LAB</span>
+                <span class="status-active"><i class="fa-solid fa-circle"></i> STANDBY</span>
+              </div>
+              <h3 class="mission-title">Python Vulnerability Hunting & Port Auditing Suite</h3>
+              <p class="mission-desc">
+                Developed modular Python scripts to automate surface reconnaissance, port banner grabbing, 
+                and log anomaly extraction to accelerate vulnerability hunting workflows.
+              </p>
+              
+              <div class="mission-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Multi-threaded network socket probes for rapid target discovery</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>HTTP header security auditor flagging missing CSP, HSTS, and X-Frame-Options</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Log parsing utility converting raw security event logs to structured JSON</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-pills">
+                <span class="pill">Python 3</span>
+                <span class="pill">Sockets</span>
+                <span class="pill">Requests</span>
+                <span class="pill">Vulnerability Recon</span>
+                <span class="pill">Automation</span>
+              </div>
+
+              <div class="mission-actions">
+                <a href="#terminal" class="anime-btn btn-secondary sound-click">
+                  <span class="btn-jp">試す</span>
+                  <span class="btn-label"><i class="fa-solid fa-terminal"></i> Run Python Scanner in Terminal</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="mission-visual">
+              <div class="terminal-mockup">
+                <div class="terminal-bar">
+                  <div class="terminal-circles">
+                    <span class="tc red"></span>
+                    <span class="tc yellow"></span>
+                    <span class="tc green"></span>
+                  </div>
+                  <div class="terminal-title">python3 hunter_recon.py</div>
+                </div>
+                <div class="terminal-screen">
+                  <div class="code-line"><span class="c-yellow">import socket, sys, threading</span></div>
+                  <div class="code-line"><span class="c-purple">def hunt_target(host, port):</span></div>
+                  <div class="code-line">&nbsp;&nbsp;s = socket.socket()</div>
+                  <div class="code-line">&nbsp;&nbsp;s.settimeout(0.5)</div>
+                  <div class="code-line">&nbsp;&nbsp;res = s.connect_ex((host, port))</div>
+                  <div class="code-line">&nbsp;&nbsp;<span class="c-cyan">if res == 0: yield (port, 'OPEN')</span></div>
+                  <div class="code-line"><span class="c-green">&gt; Scanner Ready: Multi-threaded engine initialized</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials & Guild / Certifications & Education Section -->
+  <section id="certifications" class="section-wrapper credentials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> GUILD // CREDENTIALS</span>
+        <h2 class="section-title">CERTIFIED <span class="highlight-text">TITLES & EDUCATION</span></h2>
+        <p class="section-subtitle">Official accreditations validating tactical knowledge and defensive rigor.</p>
+      </div>
+
+      <div class="credentials-grid">
+        
+        <!-- CEH Certification Card -->
+        <div class="cred-card glass-panel featured-cert">
+          <div class="cert-gold-glow"></div>
+          <div class="cert-header">
+            <div class="cert-badge-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="cert-meta">
+              <span class="cert-issuer">EC-COUNCIL OFFICIAL</span>
+              <h3 class="cert-title">Certified Ethical Hacker (CEH)</h3>
+            </div>
+          </div>
+
+          <p class="cert-body">
+            Accredited by the internationally recognized EC-Council. Rigorously examined on threat methodologies, 
+            trojan infection chains, vulnerability assessments, reconnaissance phases, and ethical mitigation tactics.
+          </p>
+
+          <div class="cert-tags">
+            <span class="tag gold-tag"><i class="fa-solid fa-crown"></i> CEH Verified</span>
+            <span class="tag">Ethical Hacking</span>
+            <span class="tag">Security Standards</span>
+          </div>
+
+          <div class="cert-footer">
+            <span class="auth-code">AUTH: EC-COUNCIL // CYBER DEFENSE</span>
+          </div>
+        </div>
+
+        <!-- Advanced Diploma in Cyber Defence -->
+        <div class="cred-card glass-panel">
+          <div class="cert-header">
+            <div class="cert-badge-icon blue-badge">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div class="cert-meta">
+              <span class="cert-issuer">RED TEAM HACKERS ACADEMY, THRISSUR</span>
+              <h3 class="cert-title">Advanced Diploma in Cyber Defence</h3>
+            </div>
+          </div>
+
+          <p class="cert-body">
+            Comprehensive deep-dive into hands-on offensive security, vulnerability assessment and penetration testing (VAPT), 
+            threat vectors, firewall configuration, and red/blue team defensive operations.
+          </p>
+
+          <div class="cert-tags">
+            <span class="tag">Advanced Cyber Defence</span>
+            <span class="tag">Red Team Tactics</span>
+            <span class="tag">Defensive Blueprint</span>
+          </div>
+        </div>
+
+        <!-- Bachelor of Vocational Studies in IT -->
+        <div class="cred-card glass-panel">
+          <div class="cert-header">
+            <div class="cert-badge-icon green-badge">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="cert-meta">
+              <span class="cert-issuer">CHRIST COLLEGE AUTONOMOUS, IRINJALAKUDA</span>
+              <h3 class="cert-title">Bachelor of Vocational Studies in IT</h3>
+            </div>
+          </div>
+
+          <p class="cert-body">
+            Graduated with foundational expertise across computer networks, system administration, 
+            software engineering principles, data structures, and enterprise IT infrastructure.
+          </p>
+
+          <div class="cert-tags">
+            <span class="tag">B.Voc IT Graduate</span>
+            <span class="tag">Computer Science</span>
+            <span class="tag">System Architecture</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated Resume & Cyber Dossier Section -->
+  <section id="resume" class="section-wrapper resume-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-file-contract"></i> DOSSIER // CURRICULUM VITAE</span>
+        <h2 class="section-title">OFFICIAL <span class="highlight-text">RESUME & DOSSIER</span></h2>
+        <p class="section-subtitle">Comprehensive operational record of Amjad T.S — Certified Ethical Hacker (CEH), SIEM Telemetry Architect & Python Developer.</p>
+      </div>
+
+      <!-- Resume Hub Actions & Mode Switcher -->
+      <div class="resume-controls-bar">
+        <div class="resume-tabs">
+          <button class="resume-tab-btn active sound-click" data-tab="dossier" id="tabDossierBtn">
+            <i class="fa-solid fa-id-card-clip"></i>
+            <span>Interactive Cyber Dossier</span>
+          </button>
+          <button class="resume-tab-btn sound-click" data-tab="pdf" id="tabPdfBtn">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Live PDF Document Viewer</span>
+          </button>
+        </div>
+
+        <div class="resume-download-actions">
+          <a href="assets/amjad_resume.pdf" download="Amjad_TS_Cybersecurity_Resume.pdf" class="anime-btn btn-primary sound-click">
+            <span class="btn-jp">履歴書を保存</span>
+            <span class="btn-label"><i class="fa-solid fa-download"></i> Download PDF</span>
+            <div class="btn-flare"></div>
+          </a>
+          <a href="assets/amjad_resume.pdf" target="_blank" rel="noopener noreferrer" class="anime-btn btn-glass sound-click">
+            <span class="btn-jp">別窓で開く</span>
+            <span class="btn-label"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Fullscreen</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab 1: Interactive Cyber Dossier View -->
+      <div id="resumeDossierView" class="resume-view-pane active-pane">
+        <div class="dossier-sheet glass-panel">
+          <div class="dossier-watermark">AMJAD T.S // CEH</div>
+
+          <!-- Dossier Header -->
+          <div class="dossier-hero-header">
+            <div class="dossier-name-block">
+              <span class="dossier-callsign">CLASSIFIED DOSSIER // S-TIER CANDIDATE</span>
+              <h3 class="dossier-fullname">AMJAD T.S</h3>
+              <p class="dossier-target-role">Certified Ethical Hacker (CEH) • Cybersecurity Specialist • Python Developer</p>
+            </div>
+            
+            <div class="dossier-contact-pills">
+              <div class="d-pill"><i class="fa-solid fa-location-dot"></i> Kodungallur, Kerala, India</div>
+              <a href="mailto:tsamjad07@gmail.com" class="d-pill hoverable"><i class="fa-solid fa-envelope"></i> tsamjad07@gmail.com</a>
+              <a href="tel:+918592068771" class="d-pill hoverable"><i class="fa-solid fa-phone"></i> +91 8592068771</a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="d-pill hoverable"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+            </div>
+          </div>
+
+          <div class="dossier-divider"></div>
+
+          <!-- Professional Summary -->
+          <div class="dossier-block">
+            <div class="dossier-block-title">
+              <i class="fa-solid fa-terminal"></i>
+              <span>PROFESSIONAL SUMMARY</span>
+              <div class="title-line"></div>
+            </div>
+            <p class="dossier-summary-content">
+              Tech-enthusiastic IT graduate with a strong interest in cybersecurity, Python-based development, and vulnerability 
+              hunting. Hands-on exposure to threat analysis, risk assessment, and security monitoring through SIEM tools and log 
+              analysis, backed by an Advanced Diploma in Cyber Defence and CEH certification. Quick learner with strong 
+              analytical and problem-solving abilities, eager to apply Python development and security assessment skills to a 
+              Cyber Security role.
+            </p>
+          </div>
+
+          <!-- Technical Skills Matrix -->
+          <div class="dossier-block">
+            <div class="dossier-block-title">
+              <i class="fa-solid fa-microchip"></i>
+              <span>SKILLS & ARSENAL MATRIX</span>
+              <div class="title-line"></div>
+            </div>
+
+            <div class="dossier-skills-grid">
+              <div class="skill-column">
+                <h4 class="col-title"><i class="fa-brands fa-python"></i> Programming Languages</h4>
+                <div class="skill-tags-cloud">
+                  <span class="s-tag highlight">Python (Core, Security Scripting, Automation)</span>
+                </div>
+              </div>
+
+              <div class="skill-column">
+                <h4 class="col-title"><i class="fa-solid fa-shield-virus"></i> Cybersecurity Specializations</h4>
+                <div class="skill-tags-cloud">
+                  <span class="s-tag">Threat Analysis</span>
+                  <span class="s-tag">Risk Assessment</span>
+                  <span class="s-tag">Vulnerability Hunting</span>
+                  <span class="s-tag">Penetration Testing</span>
+                  <span class="s-tag">Vulnerability Assessment</span>
+                  <span class="s-tag">Basic Web Application Security</span>
+                  <span class="s-tag">VAPT</span>
+                </div>
+              </div>
+
+              <div class="skill-column">
+                <h4 class="col-title"><i class="fa-solid fa-toolbox"></i> Cybersecurity Tools</h4>
+                <div class="skill-tags-cloud">
+                  <span class="s-tag highlight">Splunk SIEM</span>
+                  <span class="s-tag highlight">Wazuh EDR</span>
+                  <span class="s-tag">Wireshark</span>
+                  <span class="s-tag">Burp Suite</span>
+                  <span class="s-tag">Nmap</span>
+                  <span class="s-tag">Metasploit</span>
+                  <span class="s-tag">Nessus</span>
+                  <span class="s-tag">Nikto</span>
+                  <span class="s-tag">Hydra</span>
+                  <span class="s-tag">Aircrack-ng</span>
+                </div>
+              </div>
+
+              <div class="skill-column">
+                <h4 class="col-title"><i class="fa-solid fa-desktop"></i> Operating Systems & Soft Skills</h4>
+                <div class="skill-tags-cloud">
+                  <span class="s-tag">Linux (Kali, Ubuntu)</span>
+                  <span class="s-tag">Windows Hardening</span>
+                  <span class="s-tag">Communication</span>
+                  <span class="s-tag">Teamwork</span>
+                  <span class="s-tag">Critical Thinking</span>
+                  <span class="s-tag">Problem Solving</span>
+                  <span class="s-tag">Observation</span>
+                  <span class="s-tag">Time Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Certifications -->
+          <div class="dossier-block">
+            <div class="dossier-block-title">
+              <i class="fa-solid fa-award"></i>
+              <span>CERTIFICATIONS</span>
+              <div class="title-line"></div>
+            </div>
+            
+            <div class="dossier-cert-item">
+              <div class="d-cert-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="d-cert-body">
+                <h4 class="d-cert-name">Certified Ethical Hacker (CEH)</h4>
+                <span class="d-cert-issuer">EC-Council — Official International Verification</span>
+                <p class="d-cert-desc">Validated on reconnaissance methods, network scanning, system hijacking, malware threats, sniffing, social engineering, denial-of-service vectors, and ethical vulnerability remediation.</p>
+              </div>
+              <span class="cert-status-tag"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+            </div>
+          </div>
+
+          <!-- Mission Deployments & Projects -->
+          <div class="dossier-block">
+            <div class="dossier-block-title">
+              <i class="fa-solid fa-rocket"></i>
+              <span>NOTABLE PROJECTS</span>
+              <div class="title-line"></div>
+            </div>
+
+            <div class="dossier-project-list">
+              <!-- Project 1 -->
+              <div class="d-proj-card">
+                <div class="d-proj-header">
+                  <h4 class="d-proj-title"><i class="fa-solid fa-chart-line"></i> Splunk SIEM Log Monitoring System</h4>
+                  <span class="d-proj-role">Architect & Implementation Engineer</span>
+                </div>
+                <p class="d-proj-desc">
+                  Configured Splunk Enterprise for centralized log collection and security monitoring. Integrated Splunk Universal 
+                  Forwarder to collect system logs and created alerts to detect suspicious login activity.
+                </p>
+                <div class="d-proj-bullets">
+                  <div><i class="fa-solid fa-chevron-right"></i> Set up Universal Forwarders on Linux and Windows endpoints to direct event streams to core indexers.</div>
+                  <div><i class="fa-solid fa-chevron-right"></i> Built custom Search Processing Language (SPL) alerts alerting on rapid failed authentication patterns.</div>
+                  <div><i class="fa-solid fa-chevron-right"></i> Implemented real-time security operational monitoring views for proactive incident response.</div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="d-proj-card">
+                <div class="d-proj-header">
+                  <h4 class="d-proj-title"><i class="fa-solid fa-shield-halved"></i> Log Monitoring Using Wazuh</h4>
+                  <span class="d-proj-role">Security Deployment Specialist</span>
+                </div>
+                <p class="d-proj-desc">
+                  Deployed and configured Wazuh for centralized security log monitoring and threat detection. Set up agents to 
+                  collect and analyze system logs, enabling real-time alerting on potential security events.
+                </p>
+                <div class="d-proj-bullets">
+                  <div><i class="fa-solid fa-chevron-right"></i> Deployed distributed Wazuh agents across network nodes communicating over encrypted channels.</div>
+                  <div><i class="fa-solid fa-chevron-right"></i> Configured File Integrity Monitoring (FIM) to detect unauthorized configuration and system binary edits.</div>
+                  <div><i class="fa-solid fa-chevron-right"></i> Formatted real-time alert pipelines for instant notification on privilege escalations and policy violations.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Section -->
+          <div class="dossier-block">
+            <div class="dossier-block-title">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>ACADEMIC FOUNDATION</span>
+              <div class="title-line"></div>
+            </div>
+
+            <div class="dossier-edu-grid">
+              <div class="d-edu-card">
+                <div class="edu-stamp">GRADUATE</div>
+                <h4 class="edu-degree">Bachelor of Vocational Studies in IT</h4>
+                <span class="edu-inst">Christ College Autonomous, Irinjalakuda, Kerala, India</span>
+                <p class="edu-desc">Comprehensive curriculum covering computer science fundamentals, data networks, systems design, and software engineering.</p>
+              </div>
+
+              <div class="d-edu-card">
+                <div class="edu-stamp blue">DIPLOMA</div>
+                <h4 class="edu-degree">Advanced Diploma in Cyber Defence</h4>
+                <span class="edu-inst">Red Team Hackers Academy, Thrissur, Kerala, India</span>
+                <p class="edu-desc">Intensive practical defense training focusing on offensive penetration testing, network hardening, threat hunting, and blue team monitoring.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dossier Footer Seal -->
+          <div class="dossier-footer-bar">
+            <div class="dossier-auth-sig">
+              <span class="sig-label">OPERATIVE VERIFICATION</span>
+              <span class="sig-name">AMJAD T.S</span>
+            </div>
+            <div class="dossier-qr-box">
+              <span class="qr-text">EC-COUNCIL CEH CERTIFIED</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab 2: Live Embedded PDF Document Viewer -->
+      <div id="resumePdfView" class="resume-view-pane hidden-pane">
+        <div class="pdf-viewer-frame glass-panel">
+          <div class="pdf-viewer-toolbar">
+            <div class="toolbar-left">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="toolbar-file-name"><i class="fa-solid fa-file-pdf"></i> Amjad_TS_Cybersecurity_Resume.pdf</span>
+            </div>
+            <div class="toolbar-right">
+              <a href="assets/amjad_resume.pdf" download="Amjad_TS_Cybersecurity_Resume.pdf" class="toolbar-btn sound-click" title="Download PDF">
+                <i class="fa-solid fa-download"></i> Download
+              </a>
+              <a href="assets/amjad_resume.pdf" target="_blank" rel="noopener noreferrer" class="toolbar-btn sound-click" title="Open Fullscreen in New Window">
+                <i class="fa-solid fa-up-right-from-square"></i> Fullscreen
+              </a>
+            </div>
+          </div>
+
+          <div class="pdf-embed-wrapper">
+            <iframe src="assets/amjad_resume.pdf#toolbar=1&navpanes=0&scrollbar=1" class="pdf-iframe" title="Amjad T.S Resume Document">
+              <div class="pdf-fallback">
+                <p>Your browser doesn't support embedded PDFs.</p>
+                <a href="assets/amjad_resume.pdf" download class="anime-btn btn-primary">
+                  <span class="btn-label"><i class="fa-solid fa-download"></i> Download Resume PDF directly</span>
+                </a>
+              </div>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Anime Cyber Terminal (CLI Mode) -->
+  <section id="terminal" class="section-wrapper terminal-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-terminal"></i> INTERACTIVE CLI // HACKER CONSOLE</span>
+        <h2 class="section-title">AMJAD'S <span class="highlight-text">CYBER CONSOLE</span></h2>
+        <p class="section-subtitle">Type commands like <code>help</code>, <code>skills</code>, <code>scan</code>, or <code>whoami</code> to query the operative database in real time.</p>
+      </div>
+
+      <div class="terminal-shell glass-panel">
+        <!-- Terminal Top Bar -->
+        <div class="shell-top-bar">
+          <div class="shell-buttons">
+            <span class="dot red" title="Close"></span>
+            <span class="dot yellow" title="Minimize"></span>
+            <span class="dot green" title="Maximize"></span>
+          </div>
+          <div class="shell-title">
+            <i class="fa-solid fa-shield-halved"></i> amjad@cyber-defense-station:~ (Interactive Shell v2.4)
+          </div>
+          <div class="shell-status">
+            <span class="ping-circle"></span> CONNECTED (SECURE TSL 1.3)
+          </div>
+        </div>
+
+        <!-- Terminal Output Area -->
+        <div class="shell-body" id="shellBody">
+          <div class="shell-welcome-text">
+            <pre class="ascii-art">
+   ___     __  __       _       _     _____  ____  
+  / _ \   |  \/  |     | |     / \   |  _  \/ ___| 
+ / /_\ \  | |\/| |  _  | |    / _ \  | | | |\___ \ 
+ |  _  |  | |  | | | |_| |   / ___ \ | |_| | ___) |
+ |_| |_|  |_|  |_|  \___/   /_/   \_\|_____/|____/ 
+            </pre>
+            <p class="shell-sysinfo">========================================================================</p>
+            <p class="shell-sysinfo">[SYSTEM] Access granted to Guest Operative.</p>
+            <p class="shell-sysinfo">[HINT] Type <span class="cmd-highlight">help</span> to list commands, or try <span class="cmd-highlight">scan</span>, <span class="cmd-highlight">whoami</span>, <span class="cmd-highlight">projects</span>, <span class="cmd-highlight">ceh</span>, <span class="cmd-highlight">clear</span>.</p>
+            <p class="shell-sysinfo">========================================================================</p>
+          </div>
+
+          <div id="commandHistory"></div>
+
+          <!-- Active Prompt Line -->
+          <div class="prompt-line">
+            <span class="prompt-user">amjad@cyber-station</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-sign">$</span>
+            <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type command here (e.g. help, scan, skills)...">
+          </div>
+        </div>
+
+        <!-- Terminal Quick Action Bar -->
+        <div class="shell-footer-pills">
+          <span class="pill-label">Quick Commands:</span>
+          <button class="cmd-chip sound-click" data-cmd="help">help</button>
+          <button class="cmd-chip sound-click" data-cmd="whoami">whoami</button>
+          <button class="cmd-chip sound-click" data-cmd="skills">skills</button>
+          <button class="cmd-chip sound-click" data-cmd="projects">projects</button>
+          <button class="cmd-chip sound-click" data-cmd="scan">scan</button>
+          <button class="cmd-chip sound-click" data-cmd="ceh">ceh</button>
+          <button class="cmd-chip sound-click" data-cmd="sakura">sakura</button>
+          <button class="cmd-chip sound-click" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comms / Contact Section -->
+  <section id="contact" class="section-wrapper contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-satellite"></i> COMMS // TRANSMISSION</span>
+        <h2 class="section-title">ESTABLISH <span class="highlight-text">COMMUNICATION</span></h2>
+        <p class="section-subtitle">Looking for an enthusiastic ethical hacker, cybersecurity analyst, or Python specialist? Send a direct dispatch.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Comms Card -->
+        <div class="contact-info-card glass-panel">
+          <div class="card-kanji-bg">交信路</div>
+          <h3 class="contact-info-title">DIRECT CHANNELS</h3>
+          <p class="contact-info-desc">
+            Ready to deploy immediately for full-time cybersecurity, SOC/SIEM monitoring, threat assessment, 
+            or vulnerability auditing roles.
+          </p>
+
+          <div class="contact-methods">
+            
+            <a href="mailto:tsamjad07@gmail.com" class="method-item sound-click">
+              <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="method-text">
+                <span class="method-label">Direct Email</span>
+                <span class="method-val">tsamjad07@gmail.com</span>
+              </div>
+              <div class="method-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="tel:+918592068771" class="method-item sound-click">
+              <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="method-text">
+                <span class="method-label">Voice / WhatsApp</span>
+                <span class="method-val">+91 8592068771</span>
+              </div>
+              <div class="method-arrow"><i class="fa-solid fa-phone-volume"></i></div>
+            </a>
+
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+              <div class="method-text">
+                <span class="method-label">Deployment Location</span>
+                <span class="method-val">Kodungallur, Kerala, India (Open to Remote / Relocation)</span>
+              </div>
+            </div>
+
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="method-item sound-click">
+              <div class="method-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="method-text">
+                <span class="method-label">Professional Network</span>
+                <span class="method-val">LinkedIn Profile</span>
+              </div>
+              <div class="method-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+          </div>
+
+          <div class="download-resume-box">
+            <button id="downloadResumeBtn" class="anime-btn btn-primary full-width sound-click">
+              <span class="btn-jp">履歴書を保存</span>
+              <span class="btn-label"><i class="fa-solid fa-file-pdf"></i> Download Amjad's Resume</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Transmission Form -->
+        <div class="contact-form-card glass-panel">
+          <div class="panel-header">
+            <div class="status-light green"></div>
+            <h3>TRANSMIT DISPATCH // SECURE UPLINK</h3>
+            <span class="serial-tag">ENCRYPTION: AES-256</span>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="senderName"><i class="fa-solid fa-user"></i> Operative / Recruiter Name</label>
+              <input type="text" id="senderName" required placeholder="e.g. Alex Vance, Security Director">
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail"><i class="fa-solid fa-at"></i> Operative Email</label>
+              <input type="email" id="senderEmail" required placeholder="e.g. alex@cyberfirm.com">
+            </div>
+
+            <div class="form-group">
+              <label for="missionSubject"><i class="fa-solid fa-tag"></i> Mission Subject</label>
+              <input type="text" id="missionSubject" required placeholder="e.g. Cybersecurity Role / Vulnerability Assessment Project">
+            </div>
+
+            <div class="form-group">
+              <label for="missionMessage"><i class="fa-solid fa-comment-dots"></i> Transmission Payload</label>
+              <textarea id="missionMessage" rows="4" required placeholder="Write your project details or job description here..."></textarea>
+            </div>
+
+            <button type="submit" class="anime-btn btn-primary full-width sound-click" id="transmitBtn">
+              <span class="btn-jp">交信を送信する</span>
+              <span class="btn-label"><i class="fa-solid fa-bolt"></i> Send Encrypted Transmission</span>
+              <div class="btn-flare"></div>
+            </button>
+          </form>
+
+          <div id="formSuccessToast" class="form-toast hidden">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>TRANSMISSION LOGGED!</strong>
+              <p>Mail dispatch drafted to tsamjad07@gmail.com. Thank you for connecting!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Simulation Modal (Splunk & Wazuh) -->
+  <div id="projectModal" class="project-modal-backdrop hidden">
+    <div class="project-modal glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-tag" id="modalTag">SIMULATION</span>
+          <h3 id="modalTitle">Project Deep Dive</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Alert -->
+  <div id="cyberToast" class="cyber-toast hidden">
+    <div class="toast-icon"><i class="fa-solid fa-terminal"></i></div>
+    <div class="toast-content" id="toastMessage">Action completed successfully</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-jp">サイバー防衛</span>
+          <span class="logo-name">AMJAD T.S</span>
+        </div>
+        <p class="footer-tagline">Defending Networks • Hunting Vulnerabilities • Architecting SIEM Fortresses</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="kanji-seal">
+          <span class="seal-inner">認定</span>
+          <span class="seal-text">CEH VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">© 2026 AMJAD T.S. All Rights Reserved.</p>
+        <p class="tech-note">Engineered with Anime Cyberpunk UI & Web Audio FX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

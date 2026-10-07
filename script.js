@@ -162,10 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 3. SAKURA PETALS & MATRIX PARTICLES CANVAS
+  // 3. RED TEAM CYBER THREAT TELEMETRY CANVAS
   // ==========================================
   const canvas = document.getElementById('sakuraCanvas');
-  let sakuraActive = true;
+  let radarActive = true;
 
   if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -177,107 +177,67 @@ document.addEventListener('DOMContentLoaded', () => {
       height = canvas.height = window.innerHeight;
     });
 
-    // Particle classes: Sakura Petals & Cyber Dust
-    class SakuraPetal {
+    // Cyber Threat Telemetry Nodes & Connecting Laser Filaments
+    class ThreatNode {
       constructor() {
         this.reset(true);
       }
       reset(init = false) {
         this.x = Math.random() * width;
-        this.y = init ? Math.random() * height : -20;
-        this.size = 9 + Math.random() * 11;
-        this.speedX = -1 + Math.random() * 2;
-        this.speedY = 1.2 + Math.random() * 1.8;
-        this.angle = Math.random() * Math.PI * 2;
-        this.angularSpeed = (Math.random() - 0.5) * 0.03;
-        this.tilt = Math.random() * Math.PI;
-        this.tiltSpeed = 0.02 + Math.random() * 0.03;
-        this.opacity = 0.4 + Math.random() * 0.45;
-        this.isGlow = Math.random() > 0.6;
+        this.y = init ? Math.random() * height : (Math.random() > 0.5 ? -10 : height + 10);
+        this.radius = 1.5 + Math.random() * 2;
+        this.speedX = (Math.random() - 0.5) * 0.9;
+        this.speedY = (Math.random() - 0.5) * 0.9;
+        this.isRed = Math.random() > 0.35;
+        this.opacity = 0.3 + Math.random() * 0.55;
       }
       update() {
+        this.x += this.speedX;
         this.y += this.speedY;
-        this.x += Math.sin(this.tilt) * 1.5 + this.speedX;
-        this.angle += this.angularSpeed;
-        this.tilt += this.tiltSpeed;
 
-        if (this.y > height + 20 || this.x < -40 || this.x > width + 40) {
+        if (this.x < -20 || this.x > width + 20 || this.y < -20 || this.y > height + 20) {
           this.reset();
         }
       }
       draw() {
-        if (!sakuraActive) return;
-        ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.angle);
-        ctx.scale(Math.sin(this.tilt), 1);
-
+        if (!radarActive) return;
         ctx.beginPath();
-        // Anime petal teardrop curve
-        ctx.moveTo(0, 0);
-        ctx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size / 2, this.size / 2, 0, this.size);
-        ctx.bezierCurveTo(this.size / 2, this.size / 2, this.size / 2, -this.size / 2, 0, 0);
-
-        if (this.isGlow) {
-          ctx.fillStyle = `rgba(255, 130, 200, ${this.opacity})`;
-          ctx.shadowColor = '#ff007f';
-          ctx.shadowBlur = 8;
-        } else {
-          ctx.fillStyle = `rgba(255, 180, 220, ${this.opacity})`;
-          ctx.shadowColor = '#ffb3c6';
-          ctx.shadowBlur = 3;
-        }
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.isRed ? `rgba(255, 26, 53, ${this.opacity})` : `rgba(255, 255, 255, ${this.opacity * 0.8})`;
+        ctx.shadowColor = this.isRed ? '#ff1a35' : '#ffffff';
+        ctx.shadowBlur = this.isRed ? 8 : 4;
         ctx.fill();
-        ctx.restore();
       }
     }
 
-    class CyberParticle {
-      constructor() {
-        this.reset(true);
-      }
-      reset(init = false) {
-        this.x = Math.random() * width;
-        this.y = init ? Math.random() * height : height + 10;
-        this.size = 1 + Math.random() * 2.5;
-        this.speedY = -(0.5 + Math.random() * 1.5);
-        this.speedX = (Math.random() - 0.5) * 0.6;
-        this.opacity = 0.2 + Math.random() * 0.6;
-        this.color = Math.random() > 0.5 ? '#00f0ff' : '#9d4edd';
-      }
-      update() {
-        this.y += this.speedY;
-        this.x += this.speedX;
-        if (this.y < -10) this.reset();
-      }
-      draw() {
-        ctx.save();
-        ctx.fillStyle = this.color;
-        ctx.globalAlpha = this.opacity;
-        ctx.shadowColor = this.color;
-        ctx.shadowBlur = 6;
-        ctx.fillRect(this.x, this.y, this.size, this.size);
-        ctx.restore();
-      }
-    }
-
-    const petals = Array.from({ length: 32 }, () => new SakuraPetal());
-    const cyberDust = Array.from({ length: 40 }, () => new CyberParticle());
+    const nodes = Array.from({ length: 48 }, () => new ThreatNode());
 
     function animateParticles() {
       ctx.clearRect(0, 0, width, height);
 
-      // Update & Draw Cyber Dust
-      cyberDust.forEach(p => {
-        p.update();
-        p.draw();
-      });
+      if (radarActive) {
+        // Draw connecting filaments between close nodes
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
 
-      // Update & Draw Petals
-      if (sakuraActive) {
-        petals.forEach(p => {
-          p.update();
-          p.draw();
+            if (dist < 130) {
+              const alpha = (1 - dist / 130) * 0.18;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = `rgba(229, 9, 20, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        }
+
+        nodes.forEach(n => {
+          n.update();
+          n.draw();
         });
       }
 
@@ -285,16 +245,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateParticles();
 
-    // Toggle Sakura Button
+    // Toggle Radar Button
     const sakuraToggleBtn = document.getElementById('sakuraToggleBtn');
     if (sakuraToggleBtn) {
       sakuraToggleBtn.addEventListener('click', () => {
-        sakuraActive = !sakuraActive;
+        radarActive = !radarActive;
         const textSpan = sakuraToggleBtn.querySelector('.hud-text');
-        textSpan.textContent = sakuraActive ? 'SAKURA: ON' : 'SAKURA: OFF';
-        sakuraToggleBtn.style.borderColor = sakuraActive ? 'var(--neon-magenta)' : 'var(--text-muted)';
+        textSpan.textContent = radarActive ? 'RADAR: ON' : 'RADAR: OFF';
+        sakuraToggleBtn.style.borderColor = radarActive ? 'var(--redteam-primary)' : 'var(--text-muted)';
         playBladeSlash();
-        triggerToast(sakuraActive ? 'Sakura Petals: Enabled' : 'Sakura Petals: Disabled');
+        triggerToast(radarActive ? 'Threat Telemetry Radar: Active' : 'Threat Telemetry Radar: Standby');
       });
     }
   }
@@ -331,42 +291,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 5. DUAL PERSONA AVATAR SYSTEM (TRANSFORM)
+  // 5. OPERATIVE PERSONA AVATAR SYSTEM
   // ==========================================
   const avatarCardWrapper = document.getElementById('avatarCardWrapper');
   const avatarAnimeBox = document.getElementById('avatarAnimeBox');
   const avatarRealBox = document.getElementById('avatarRealBox');
-  const avatarSwitchPill = document.getElementById('avatarSwitchPill');
   const avatarModeToggleBtn = document.getElementById('avatarModeToggleBtn');
 
-  let currentAvatarMode = 'anime'; // 'anime' or 'real'
+  let currentAvatarMode = 'redteam'; // 'redteam' or 'real'
 
   function toggleAvatarMode(e) {
     if (e) {
       const rect = (avatarCardWrapper || document.body).getBoundingClientRect();
-      triggerMangaSound(e.clientX || rect.left + rect.width / 2, e.clientY || rect.top + rect.height / 2, 'TRANSFORM!');
+      triggerMangaSound(e.clientX || rect.left + rect.width / 2, e.clientY || rect.top + rect.height / 2, 'ENGAGED!');
     }
     triggerSpeedlines(450);
     playPowerUp();
 
-    if (currentAvatarMode === 'anime') {
+    if (currentAvatarMode === 'redteam') {
       currentAvatarMode = 'real';
       avatarAnimeBox.classList.remove('active-avatar');
       avatarRealBox.classList.add('active-avatar');
       if (avatarModeToggleBtn) {
-        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: OPERATIVE';
-        avatarModeToggleBtn.classList.remove('glow-cyan');
+        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: FIELD PROFILE';
+        avatarModeToggleBtn.classList.remove('glow-red');
       }
-      triggerToast('Operative Persona: Real Photo Active');
+      triggerToast('Operative View: Field Profile Active');
     } else {
-      currentAvatarMode = 'anime';
+      currentAvatarMode = 'redteam';
       avatarRealBox.classList.remove('active-avatar');
       avatarAnimeBox.classList.add('active-avatar');
       if (avatarModeToggleBtn) {
-        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: ANIME HERO';
-        avatarModeToggleBtn.classList.add('glow-cyan');
+        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: RED TEAM';
+        avatarModeToggleBtn.classList.add('glow-red');
       }
-      triggerToast('Operative Persona: Anime Cyber Specialist Active');
+      triggerToast('Operative View: Red Team Cyber Specialist Active');
     }
   }
 
@@ -378,15 +337,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 6. DYNAMIC GLITCH TYPING SUBTITLE
+  // 6. DYNAMIC SUBTITLE TYPING LOOP
   // ==========================================
   const roles = [
-    'CERTIFIED ETHICAL HACKER (CEH)',
-    'CYBERSECURITY DEFENDER',
-    'SIEM LOG MONITORING ARCHITECT',
-    'SPLUNK & WAZUH SPECIALIST',
-    'PYTHON THREAT AUTOMATOR',
-    'VAPT & VULNERABILITY HUNTER'
+    'CERTIFIED ETHICAL HACKER (CEH v12)',
+    'RED TEAM HACKERS ACADEMY SPECIALIST',
+    'ENTERPRISE SIEM ARCHITECT // SPLUNK & WAZUH',
+    'OFFENSIVE PENETRATION TESTER & VAPT',
+    'PYTHON SECURITY AUTOMATION ENGINEER'
   ];
   const typedRoleElem = document.getElementById('typedRole');
   let roleIdx = 0;

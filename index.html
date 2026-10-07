@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMJAD T.S // Cyber Defender & CEH Ethical Hacker | Anime Portfolio</title>
-  <meta name="description" content="Portfolio of Amjad T.S - Certified Ethical Hacker (CEH), Cybersecurity Specialist, Python Developer & SIEM Log Monitoring Engineer.">
+  <title>AMJAD T.S // Certified Ethical Hacker (CEH) | Red Team Cyber Defender</title>
+  <meta name="description" content="Portfolio of Amjad T.S - Red Team Hackers Academy Alumnus, EC-Council Certified Ethical Hacker (CEH), SIEM Log Monitoring & Python Developer.">
   
-  <!-- Google Fonts: Orbitron, Rajdhani, Poppins, Noto Sans JP -->
+  <!-- Google Fonts: Orbitron, Rajdhani, Poppins, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="anime-theme dark-mode">
+<body class="redteam-theme dark-mode">
 
-  <!-- Interactive Sakura & Cyber Dust Particles Canvas -->
+  <!-- Interactive Red Team Cyber Telemetry Canvas -->
   <canvas id="sakuraCanvas"></canvas>
 
-  <!-- Speedline Flash Overlay for special anime actions -->
+  <!-- Speedline Flash Overlay for special tactical actions -->
   <div id="speedlinesOverlay" class="speedlines-overlay"></div>
 
-  <!-- Anime Manga Action Sound Popup Floating Container -->
+  <!-- Tactical Manga Sound Popup Floating Container -->
   <div id="mangaSoundContainer" class="manga-sound-container"></div>
 
-  <!-- Custom Cyber Blade Cursor -->
+  <!-- Custom Tactical Red Laser Cursor -->
   <div id="customCursor" class="custom-cursor"></div>
   <div id="cursorTrail" class="cursor-trail"></div>
 
@@ -35,38 +35,39 @@
   <header class="navbar-wrapper">
     <nav class="navbar container">
       <a href="#hero" class="brand-logo">
-        <span class="logo-jp">サイバー防衛</span>
-        <div class="logo-main">
-          <span class="logo-bracket">&lt;</span>
-          <span class="logo-name">AMJAD</span>
-          <span class="logo-tag">.DEV</span>
-          <span class="logo-bracket">/&gt;</span>
+        <div class="logo-shield-box"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="logo-text-group">
+          <span class="logo-academy-tag">RED TEAM // ACADEMY SPEC</span>
+          <div class="logo-main">
+            <span class="logo-name">AMJAD</span>
+            <span class="logo-tag">.DEFENSE</span>
+          </div>
         </div>
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link"><span class="nav-jp">概要</span> 01. Codex</a></li>
-        <li><a href="#skills" class="nav-link"><span class="nav-jp">能力</span> 02. Arsenal</a></li>
-        <li><a href="#projects" class="nav-link"><span class="nav-jp">任務</span> 03. Missions</a></li>
-        <li><a href="#certifications" class="nav-link"><span class="nav-jp">称号</span> 04. Credentials</a></li>
-        <li><a href="#resume" class="nav-link"><span class="nav-jp">履歴書</span> 05. Resume</a></li>
-        <li><a href="#terminal" class="nav-link"><span class="nav-jp">端末</span> 06. Terminal</a></li>
-        <li><a href="#contact" class="nav-link nav-contact-btn"><span class="nav-jp">交信</span> Contact</a></li>
+        <li><a href="#about" class="nav-link"><span class="nav-jp">DOSSIER</span> 01. Profile</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-jp">CAPABILITIES</span> 02. Arsenal</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-jp">OPERATIONS</span> 03. Missions</a></li>
+        <li><a href="#certifications" class="nav-link"><span class="nav-jp">CREDENTIALS</span> 04. Certifications</a></li>
+        <li><a href="#resume" class="nav-link"><span class="nav-jp">CURRICULUM</span> 05. Resume</a></li>
+        <li><a href="#terminal" class="nav-link"><span class="nav-jp">CONSOLE</span> 06. Terminal</a></li>
+        <li><a href="#contact" class="nav-link nav-contact-btn"><span class="nav-jp">DEPLOY</span> Contact</a></li>
       </ul>
 
       <!-- Integrated HUD Control Group -->
       <div class="nav-hud-group">
-        <button id="sfxToggleBtn" class="hud-pill" title="Toggle Anime Cyber Sound Effects">
+        <button id="sfxToggleBtn" class="hud-pill" title="Toggle Cyber Audio Feedback">
           <i class="fa-solid fa-volume-high"></i>
           <span class="hud-text">SFX: ON</span>
         </button>
-        <button id="sakuraToggleBtn" class="hud-pill" title="Toggle Sakura Petals Animation">
-          <i class="fa-solid fa-fan"></i>
-          <span class="hud-text">SAKURA</span>
+        <button id="sakuraToggleBtn" class="hud-pill" title="Toggle Threat Telemetry Radar Particles">
+          <i class="fa-solid fa-satellite-dish"></i>
+          <span class="hud-text">RADAR</span>
         </button>
-        <button id="avatarModeToggleBtn" class="hud-pill glow-cyan" title="Toggle Anime Avatar / Real Agent Mode">
-          <i class="fa-solid fa-mask"></i>
-          <span class="hud-text">MODE: ANIME</span>
+        <button id="avatarModeToggleBtn" class="hud-pill glow-red" title="Toggle Red Team Operative / Field Photo Mode">
+          <i class="fa-solid fa-user-shield"></i>
+          <span class="hud-text">MODE: RED TEAM</span>
         </button>
         <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
           <span></span>
@@ -89,20 +90,20 @@
         <div class="hero-badge-wrapper">
           <div class="status-indicator">
             <span class="pulse-dot"></span>
-            <span class="status-text">STATUS: ACTIVE THREAT DEFENDER // CEH</span>
+            <span class="status-text">RED TEAM HACKERS ACADEMY ALUMNUS // CEH v12</span>
           </div>
-          <div class="class-rank">RANK: S-CLASS HUNTER</div>
+          <div class="class-rank">OFFENSIVE SECURITY & SIEM DEFENDER</div>
         </div>
 
         <h2 class="hero-greeting">
-          <span class="kanji-accent">ようこそ //</span> GREETINGS, OPERATIVE
+          <span class="kanji-accent"><i class="fa-solid fa-crosshairs"></i> ACTIVE THREAT HUNTING //</span> OPERATIVE BRIEFING
         </h2>
 
         <h1 class="hero-title">
           I'M <span class="highlight-text glitched-text" data-text="AMJAD T.S">AMJAD T.S</span>
         </h1>
 
-        <!-- Anime Dynamic Subtitle Typing -->
+        <!-- Dynamic Subtitle Typing -->
         <div class="typing-container">
           <span class="prompt-arrow">&gt;</span>
           <span id="typedRole" class="typed-text"></span>
@@ -110,31 +111,31 @@
         </div>
 
         <p class="hero-description">
-          Tech-enthusiastic cybersecurity practitioner armed with <strong>EC-Council CEH</strong> certification 
-          and an Advanced Diploma in Cyber Defence. Specialized in Python automation, enterprise SIEM threat telemetry 
-          (Splunk & Wazuh), and aggressive vulnerability hunting.
+          Offensive cybersecurity practitioner trained at <strong>Red Team Hackers Academy</strong> and certified as an 
+          <strong>EC-Council Certified Ethical Hacker (CEH)</strong>. Specialized in penetration testing (VAPT), 
+          enterprise SIEM threat telemetry (Splunk & Wazuh EDR), and tactical Python exploit automation.
         </p>
 
         <!-- Call to Action Buttons -->
         <div class="hero-actions">
           <a href="#projects" class="anime-btn btn-primary sound-click">
-            <span class="btn-jp">任務を見る</span>
-            <span class="btn-label"><i class="fa-solid fa-crosshairs"></i> View Missions</span>
+            <span class="btn-jp">OPERATION LOGS</span>
+            <span class="btn-label"><i class="fa-solid fa-shield-virus"></i> Explore Missions</span>
             <div class="btn-flare"></div>
           </a>
 
           <a href="#resume" class="anime-btn btn-secondary sound-click">
-            <span class="btn-jp">履歴書を見る</span>
+            <span class="btn-jp">OFFICIAL DOSSIER</span>
             <span class="btn-label"><i class="fa-solid fa-file-pdf"></i> View Resume</span>
           </a>
 
           <a href="#terminal" class="anime-btn btn-glass sound-click">
-            <span class="btn-jp">端末を開く</span>
-            <span class="btn-label"><i class="fa-solid fa-terminal"></i> Terminal CLI</span>
+            <span class="btn-jp">TERMINAL ACCESS</span>
+            <span class="btn-label"><i class="fa-solid fa-terminal"></i> Red Team CLI</span>
           </a>
 
           <button id="copyEmailQuickBtn" class="anime-btn btn-glass sound-click">
-            <span class="btn-jp">電信複写</span>
+            <span class="btn-jp">COMMS UPLINK</span>
             <span class="btn-label"><i class="fa-regular fa-copy"></i> Copy Email</span>
           </button>
         </div>
@@ -143,12 +144,12 @@
         <div class="telemetry-bar">
           <div class="telemetry-item">
             <span class="telem-num" data-val="100">100%</span>
-            <span class="telem-label">Target Vigilance</span>
+            <span class="telem-label">SOC Vigilance</span>
           </div>
           <div class="telemetry-divider"></div>
           <div class="telemetry-item">
             <span class="telem-num" data-val="12">12+</span>
-            <span class="telem-label">Offensive/Defensive Tools</span>
+            <span class="telem-label">Offensive Tools</span>
           </div>
           <div class="telemetry-divider"></div>
           <div class="telemetry-item">
@@ -157,32 +158,32 @@
           </div>
           <div class="telemetry-divider"></div>
           <div class="telemetry-item">
-            <span class="telem-num">SIEM</span>
-            <span class="telem-label">Splunk & Wazuh EDR</span>
+            <span class="telem-num">RED TEAM</span>
+            <span class="telem-label">Hackers Academy</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Hero Visual Avatar Card (Dual Persona with Anime Transform) -->
+      <!-- Hero Visual Avatar Card (Red Team Cyber Specialist) -->
       <div class="hero-visual">
         <div class="avatar-card-wrapper" id="avatarCardWrapper">
           <div class="hologram-scanline"></div>
           
           <div class="avatar-card">
-            <!-- Front image (Anime Protagonist Hacker) -->
+            <!-- Front image (Red Team Cyber Operative) -->
             <div class="avatar-img-box avatar-anime active-avatar" id="avatarAnimeBox">
-              <img src="assets/amjad_anime.jpg" alt="Amjad T.S Anime Hacker Specialist" id="animeAvatarImg">
-              <div class="avatar-badge anime-badge">
-                <i class="fa-solid fa-bolt"></i> ANIME PROTAGONIST MODE
+              <img src="assets/amjad_redteam.jpg" alt="Amjad T.S Red Team Cybersecurity Specialist" id="animeAvatarImg">
+              <div class="avatar-badge redteam-badge">
+                <i class="fa-solid fa-shield-halved"></i> RED TEAM OPERATIVE
               </div>
             </div>
 
-            <!-- Alternate image (Real Photo) -->
+            <!-- Alternate image (Field Profile Photo) -->
             <div class="avatar-img-box avatar-real" id="avatarRealBox">
               <img src="assets/amjad_photo.png" alt="Amjad T.S Professional Photo" id="realAvatarImg">
               <div class="avatar-badge real-badge">
-                <i class="fa-solid fa-user-shield"></i> REAL OPERATIVE MODE
+                <i class="fa-solid fa-user-check"></i> FIELD PROFILE MODE
               </div>
             </div>
 
@@ -192,17 +193,17 @@
             <div class="hud-corner corner-bl"></div>
             <div class="hud-corner corner-br"></div>
             
-            <div class="hud-bracket-text top-left">CYBER_DEFENSE://SEC_01</div>
-            <div class="hud-bracket-text bottom-right">LOC: KERALA, IN</div>
+            <div class="hud-bracket-text top-left">REDTEAM://SPEC_OPS</div>
+            <div class="hud-bracket-text bottom-right">ACADEMY: THRISSUR</div>
 
             <!-- Transform Switch Trigger -->
             <div class="avatar-switch-pill" id="avatarSwitchPill">
               <i class="fa-solid fa-arrows-rotate"></i>
-              <span>Click to Transform Mode</span>
+              <span>Toggle Operative View</span>
             </div>
           </div>
 
-          <!-- Anime Aura Glow Effect behind card -->
+          <!-- Red Team Aura Glow Effect behind card -->
           <div class="avatar-energy-aura"></div>
           
           <!-- Floating Cyber Orbits -->

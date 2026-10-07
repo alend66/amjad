@@ -291,49 +291,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 5. OPERATIVE PERSONA AVATAR SYSTEM
+  // 5. OPERATIVE AVATAR CARD (PERMANENT RED TEAM SPEC)
   // ==========================================
   const avatarCardWrapper = document.getElementById('avatarCardWrapper');
-  const avatarAnimeBox = document.getElementById('avatarAnimeBox');
-  const avatarRealBox = document.getElementById('avatarRealBox');
-  const avatarModeToggleBtn = document.getElementById('avatarModeToggleBtn');
-
-  let currentAvatarMode = 'redteam'; // 'redteam' or 'real'
-
-  function toggleAvatarMode(e) {
-    if (e) {
-      const rect = (avatarCardWrapper || document.body).getBoundingClientRect();
-      triggerMangaSound(e.clientX || rect.left + rect.width / 2, e.clientY || rect.top + rect.height / 2, 'ENGAGED!');
-    }
-    triggerSpeedlines(450);
-    playPowerUp();
-
-    if (currentAvatarMode === 'redteam') {
-      currentAvatarMode = 'real';
-      avatarAnimeBox.classList.remove('active-avatar');
-      avatarRealBox.classList.add('active-avatar');
-      if (avatarModeToggleBtn) {
-        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: FIELD PROFILE';
-        avatarModeToggleBtn.classList.remove('glow-red');
-      }
-      triggerToast('Operative View: Field Profile Active');
-    } else {
-      currentAvatarMode = 'redteam';
-      avatarRealBox.classList.remove('active-avatar');
-      avatarAnimeBox.classList.add('active-avatar');
-      if (avatarModeToggleBtn) {
-        avatarModeToggleBtn.querySelector('.hud-text').textContent = 'MODE: RED TEAM';
-        avatarModeToggleBtn.classList.add('glow-red');
-      }
-      triggerToast('Operative View: Red Team Cyber Specialist Active');
-    }
-  }
-
   if (avatarCardWrapper) {
-    avatarCardWrapper.addEventListener('click', toggleAvatarMode);
-  }
-  if (avatarModeToggleBtn) {
-    avatarModeToggleBtn.addEventListener('click', toggleAvatarMode);
+    avatarCardWrapper.addEventListener('mouseenter', () => playBeep(720, 'sine', 0.04));
   }
 
   // ==========================================
